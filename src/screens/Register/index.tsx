@@ -19,10 +19,14 @@ import {
   TransactionsTypes
 } from './styles';
 
-interface FormData {
-  name: string;
-  amount: string;
+export type FormData = {
+  [name: string]: any;
 }
+
+// interface FormData {
+//   name: string;
+//   amount: string;
+// }
 
 export function Register(){
   const [transactionType, setTransactionType] = useState('');
