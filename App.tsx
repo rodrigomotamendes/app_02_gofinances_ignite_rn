@@ -18,7 +18,7 @@ import theme from './src/global/styles/theme';
 import { NavigationContainer } from '@react-navigation/native';
 import { AppRoutes } from './src/routes/app.routes';
 import { SignIn } from './src/screens/SignIn';
-import { AuthContext } from './src/AuthContext';
+import { AuthProvider } from './src/hooks/auth';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -39,9 +39,9 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        <AuthContext.Provider value={[]}>
+        <AuthProvider>
           <SignIn />
-        </AuthContext.Provider>
+        </AuthProvider>
 
       </NavigationContainer>
     </ThemeProvider>
