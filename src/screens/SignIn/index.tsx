@@ -33,8 +33,7 @@ export function SignIn(){
       return await signInWithGoogle();
     } catch(error) {
       console.log(error);
-      Alert.alert('Não foi possível conectar a conta Google')
-    } finally {
+      Alert.alert('Não foi possível conectar a conta Google');
       setIsLoading(false);
     }
   }
@@ -45,8 +44,7 @@ export function SignIn(){
       return await signInWithApple();
     } catch(error) {
       console.log(error);
-      Alert.alert('Não foi possível conectar a conta Apple')
-    } finally {
+      Alert.alert('Não foi possível conectar a conta Apple');
       setIsLoading(false);
     }
   }
